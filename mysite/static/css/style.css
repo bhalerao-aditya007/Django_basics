@@ -1,0 +1,157 @@
+/* General Reset and Body */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.container {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Header Styling */
+header {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+
+/* Button Styling */
+.button {
+  background: linear-gradient(45deg, #00c9ff, #92fe9d);
+  border: none;
+  color: white;
+  padding: 15px 35px;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.glow-button {
+  box-shadow: 0 0 15px rgba(0, 201, 255, 0.4);
+  animation: pulse 2s infinite;
+}
+
+/* Footer Styling */
+footer {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.fade-down {
+  animation: fadeInDown 1s ease-out;
+}
+
+.fade-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0px rgba(0, 201, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 201, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(0, 201, 255, 0.4);
+  }
+}
+
+.table {
+  width: 90%;
+  margin: 40px auto;
+  overflow-x: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #1e1e2f;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f3f4f6;
+  cursor: pointer;
+}
+
+td {
+  font-size: 15px;
+  color: #333;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+  th, td {
+    padding: 12px 10px;
+  }
+}
+

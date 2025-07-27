@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome Home</title>
+  <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+</head>
+<body>
+  <div class="container">
+    <header class="fade-down">Welcome to My first<br>Django Project</header>
+    <p class="fade-up">Crafted by Aditya Bhalerao. <br>Explore the world of web magic on this beautifully built page.</p>
+    {% comment %} <img src ="{% static 'images\Profile_Photo.jpg'%}" ><br>
+
+    <a href="#" class="button glow-button">Get Started</a> {% endcomment %}
+  </div>
+<div class = "table">
+  <table>
+    <thead>
+      <tr>
+        <th>Sr.NO.</th>
+        <th>Full Name</th>
+        <th>Email ID</th>
+        <th>Skill</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for std in Students%}
+      <tr>
+        <td> {{forloop.counter}}</td>
+        <td><a href= "{%url 'student_profile' std.id%}" >{{std.first_name}} {{std.last_name}}</td>
+        <td> {{std.email}}</td>
+        <td> {{std.Skills}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
